@@ -1,0 +1,1841 @@
+"barhelper.exe" (CoreCLR: DefaultDomain). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Private.CoreLib.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Users\Oleshe\source\repos\barhelper\barhelper\bin\Debug\net8.0-windows\barhelper.dll". Символы загружены.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.14\PresentationFramework.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.14\WindowsBase.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Runtime.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.14\System.Xaml.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "c:\program files\microsoft visual studio\2022\community\common7\ide\commonextensions\microsoft\hotreload\Microsoft.Extensions.DotNetDeltaApplier.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.IO.Pipes.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Linq.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Collections.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Console.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Threading.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Runtime.InteropServices.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Threading.Overlapped.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Security.AccessControl.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Security.Principal.Windows.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Security.Claims.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Runtime.Loader.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PrivateAssemblies\Runtime\Microsoft.VisualStudio.Debugger.Runtime.NetCoreApp.dll". 
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\netstandard.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Threading.ThreadPool.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Diagnostics.TraceSource.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Collections.Concurrent.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Text.RegularExpressions.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Memory.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.14\PresentationCore.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\Microsoft.Win32.Registry.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Collections.Specialized.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\Microsoft.Win32.Primitives.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.14\ru\WindowsBase.resources.dll". Сборка модуля выполнена без символов.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "c:\program files\microsoft visual studio\2022\community\common7\ide\commonextensions\microsoft\xamldiagnostics\Core\x64\Microsoft.VisualStudio.DesignTools.WpfTap.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Runtime.Extensions.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Diagnostics.Tracing.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Threading.Tasks.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Threading.Thread.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.ObjectModel.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.14\DirectWriteForwarder.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Diagnostics.Debug.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Runtime.CompilerServices.VisualC.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Collections.NonGeneric.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.14\System.IO.Packaging.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Private.Uri.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.ComponentModel.TypeConverter.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.ComponentModel.Primitives.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.14\System.Configuration.ConfigurationManager.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Xml.ReaderWriter.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Private.Xml.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Net.WebClient.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Text.Encoding.Extensions.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.ComponentModel.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Runtime.Serialization.Json.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Private.DataContractSerialization.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Runtime.Serialization.Xml.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Runtime.Serialization.Primitives.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Resources.ResourceManager.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Reflection.Emit.ILGeneration.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Reflection.Emit.Lightweight.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Reflection.Primitives.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.14\System.Windows.Extensions.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Net.Requests.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Net.Primitives.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Net.WebHeaderCollection.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Diagnostics.Process.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.14\UIAutomationTypes.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Text.Json.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Text.Encodings.Web.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Runtime.Intrinsics.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Numerics.Vectors.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Users\Oleshe\source\repos\barhelper\barhelper\bin\Debug\net8.0-windows\SixLabors.ImageSharp.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Runtime.CompilerServices.Unsafe.dll". Загрузка символов отключена параметром включения и исключения.
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.IO.Compression.dll". Загрузка символов отключена параметром включения и исключения.
+bottles
+
+- type: entity
+  parent: DrinkBase
+  id: DrinkBottlePlasticBaseFull
+DrinkBottlePlasticBaseFull
+  abstract: true
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - DrinkBottle
+  - type: Openable
+    sound:
+      collection: bottleOpenSounds
+    closeable: true
+    closeSound:
+      collection: bottleCloseSounds
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 100
+  - type: Sprite
+    state: icon
+    sprite: Objects/Consumable/Drinks/generic_jug.rsi 
+generic_jug.rsi /
+  - type: Item
+    size: Normal
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:SpillBehavior { }
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: TrashOnSolutionEmpty
+    solution: drink
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 100
+  - type: DnaSubstanceTrace
+  - type: PressurizedSolution
+    solution: drink
+  - type: Shakeable
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkBottleGlassBaseFull
+DrinkBottleGlassBaseFull
+  abstract: true
+  components:
+  - type: Sprite
+    state: icon
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 5
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 4
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpillBehavior { }
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          BrokenBottle:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Tool
+    qualities:
+    - Rolling
+    speedModifier: 0.75 
+  - type: PhysicalComposition
+    materialComposition:
+      Glass: 100
+
+- type: entity
+  id: DrinkBottleVisualsOpenable
+DrinkBottleVisualsOpenable
+  abstract: true
+  components:
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: {state: "icon_open"}
+          False: {state: "icon"}
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+
+- type: entity
+  id: DrinkBottleVisualsAll
+DrinkBottleVisualsAll
+  abstract: true
+  components:
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: {state: "icon_open"}
+          False: {state: "icon_empty"}
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/alco-bottle.rsi
+alco-bottle.rsi/
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: fill-1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: SolutionContainerVisuals
+    maxFillLevels: 5
+    fillBaseName: fill-
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkAbsintheBottleFull
+DrinkAbsintheBottleFull
+  name: Jailbreaker Verte
+  description: One sip of this and you just know you're gonna have a good time.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Absinthe
+Absinthe
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-absinthe
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/absinthebottle.rsi
+absinthebottle.rsi/
+  - type: Sealable
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkBlueCuracaoBottleFull
+DrinkBlueCuracaoBottleFull
+  name: Miss Blue Curaçao
+  description: A fruity, exceptionally azure drink. Does not allow the imbiber to use the fifth magic.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: BlueCuracao
+BlueCuracao
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-blue-curacao
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/alco-bottle.rsi
+alco-bottle.rsi/
+    layers:
+      - state: icon_blue
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: fill-1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: fill-
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
+  id: DrinkBottleOfNothingFull
+DrinkBottleOfNothingFull
+  name: bottle of nothing
+  description: A bottle filled with nothing.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Nothing
+Nothing
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-nothing
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/bottleofnothing.rsi
+bottleofnothing.rsi/
+  - type: Sealable
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
+  id: DrinkChampagneBottleFull
+DrinkChampagneBottleFull
+  name: champagne bottle
+  description: Only people devoid of imagination can't find an excuse for champagne.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Champagne
+Champagne
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-champagne
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/champagnebottle.rsi
+champagnebottle.rsi/
+  - type: Openable
+    closeable: false 
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkCognacBottleFull
+DrinkCognacBottleFull
+  name: cognac bottle
+  description: A sweet and strongly alcoholic drink, made after numerous distillations and years of maturing. You might as well not scream 'SHITCURITY' this time.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Cognac
+Cognac
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-cognac
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/cognacbottle.rsi
+cognacbottle.rsi/
+  - type: Sealable
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
+  id: DrinkColaBottleFull
+DrinkColaBottleFull
+  name: Space Cola bottle
+  description: Cola. In spaaace!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Cola
+Cola
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-cola
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/colabottle.rsi
+colabottle.rsi/
+  - type: Sealable
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkGrenadineBottleFull
+DrinkGrenadineBottleFull
+  name: Briar Rose grenadine syrup bottle
+  description: Sweet and tangy, a bar syrup used to add color or flavor to drinks.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Grenadine
+Grenadine
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-grenadine
+  
+  - type: Openable
+    opened: true
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/grenadinebottle.rsi
+grenadinebottle.rsi/
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkGinBottleFull
+DrinkGinBottleFull
+  name: Griffeater gin
+  description: A bottle of high quality gin, produced in the New London Space Station.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Gin
+Gin
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-gin
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/ginbottle.rsi
+ginbottle.rsi/
+  - type: Sealable
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkGildlagerBottleFull
+DrinkGildlagerBottleFull
+  name: Gildlager bottle
+  description: 100 proof cinnamon schnapps, made for alcoholic teen girls on spring break.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Gildlager
+Gildlager
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-gildlager
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/gildlagerbottle.rsi
+gildlagerbottle.rsi/
+  - type: Sealable
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
+  id: DrinkCoffeeLiqueurBottleFull
+DrinkCoffeeLiqueurBottleFull
+  name: coffee liqueur bottle
+  description: The great taste of coffee with none of the benifits.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: CoffeeLiqueur
+CoffeeLiqueur
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-coffeeliqueur
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/coffeeliqueurbottle.rsi
+coffeeliqueurbottle.rsi/
+  - type: Sealable
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkMelonLiquorBottleFull
+DrinkMelonLiquorBottleFull
+  name: Emeraldine melon liquor
+  description: A bottle of 46 proof Emeraldine melon liquor. Sweet and light.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: MelonLiquor
+MelonLiquor
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-melon-liquor
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/alco-bottle.rsi
+alco-bottle.rsi/
+    layers:
+      - state: icon_green
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: fill-1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: fill-
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkPatronBottleFull
+DrinkPatronBottleFull
+  name: Wrapp Artiste Patrón bottle
+  description: Silver laced tequila, served in space night clubs across the galaxy.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Patron
+Patron
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-patron
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/patronbottle.rsi
+patronbottle.rsi/
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
+  id: DrinkPoisonWinebottleFull
+DrinkPoisonWinebottleFull
+  name: Warlock's Velvet bottle
+  description: What a delightful packaging for a surely high quality wine! The vintage must be amazing!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: PoisonWine
+PoisonWine
+          Quantity: 100
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/pwinebottle.rsi
+pwinebottle.rsi/
+  - type: Sealable
+  - type: Tag
+    tags:
+    - Wine
+    - DrinkBottle
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkRumBottleFull
+DrinkRumBottleFull
+  name: Captain Pete's Cuban spiced rum
+  description: This isn't just rum, oh no. It's practically GRIFF in a bottle.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Rum
+Rum
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-rum
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/rumbottle.rsi
+rumbottle.rsi/
+  - type: Sealable
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
+  id: DrinkSpaceMountainWindBottleFull
+DrinkSpaceMountainWindBottleFull
+  name: Space Solar Wind bottle
+  description: Blows right through you like a solar wind.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: SpaceMountainWind
+SpaceMountainWind
+          Quantity: 100
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-space-mountain-wind
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/space_mountain_wind_bottle.rsi
+space_mountain_wind_bottle.rsi/
+  - type: Sealable
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
+  id: DrinkSpaceUpBottleFull
+DrinkSpaceUpBottleFull
+  name: Space-Up bottle
+  description: Tastes like a hull breach in your mouth.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: SpaceUp
+SpaceUp
+          Quantity: 100
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-space-up
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/space-up_bottle.rsi
+space-up_bottle.rsi/
+  - type: Sealable
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkTequilaBottleFull
+DrinkTequilaBottleFull
+  name: Caccavo Guaranteed Quality tequila bottle
+  description: Made from premium petroleum distillates, pure thalidomide and other fine quality ingredients!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Tequila
+Tequila
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-tequila
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/tequillabottle.rsi
+tequillabottle.rsi/
+  - type: Sealable
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkVermouthBottleFull
+DrinkVermouthBottleFull
+  name: Goldeneye vermouth bottle
+  description: Sweet, sweet dryness!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Vermouth
+Vermouth
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-vermouth
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/vermouthbottle.rsi
+vermouthbottle.rsi/
+  - type: Sealable
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkVodkaBottleFull
+DrinkVodkaBottleFull
+  name: vodka bottle
+  description: Aah, vodka. Prime choice of drink AND fuel by Russians worldwide.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Vodka
+Vodka
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-vodka
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/vodkabottle.rsi
+vodkabottle.rsi/
+  - type: Sealable
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkWhiskeyBottleFull
+DrinkWhiskeyBottleFull
+  name: Uncle Git's Special Reserve
+  description: A premium single-malt whiskey, gently matured inside the tunnels of a nuclear shelter. TUNNEL WHISKEY RULES.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Whiskey
+Whiskey
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-whiskey
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/whiskeybottle.rsi
+whiskeybottle.rsi/
+  - type: Sealable
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
+  id: DrinkWineBottleFull
+DrinkWineBottleFull
+  name: Doublebearded Bearded Special wine bottle
+  description: A faint aura of unease and asspainery surrounds the bottle.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Wine
+Wine
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-wine
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/winebottle.rsi
+winebottle.rsi/
+  - type: Sealable
+  - type: Tag
+    tags:
+    - Wine
+    - DrinkBottle
+
+
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkBeerBottleFull
+DrinkBeerBottleFull
+  name: beer bottle 
+  description: An alcoholic beverage made from malted grains, hops, yeast, and water.
+  components:
+  - type: Item
+    size: Small
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: Beer
+Beer
+          Quantity: 50
+  - type: Label
+    currentLabel: reagent-name-beer
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/beer.rsi
+beer.rsi/
+  - type: Openable
+    closeable: false
+  - type: Tag
+    tags:
+    - Beer
+    - DrinkBottle
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkBeerGrowler 
+DrinkBeerGrowler
+  name: beer growler  
+  description: An alcoholic beverage made from malted grains, hops, yeast, and water. XL growler bottle.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 150
+        reagents:
+        - ReagentId: Beer
+Beer
+          Quantity: 150
+  - type: Label
+    currentLabel: reagent-name-beer
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/beer.rsi
+beer.rsi/
+  - type: Openable
+    closeable: false
+  - type: Tag
+    tags:
+    - Beer
+    - DrinkBottle
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
+  id: DrinkAleBottleFull
+DrinkAleBottleFull
+  name: Magm-Ale bottle
+  description: A true dorf's drink of choice.
+  components:
+  - type: Item
+    size: Small
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: Ale
+Ale
+          Quantity: 50
+  - type: Label
+    currentLabel: reagent-name-ale
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/alebottle.rsi
+alebottle.rsi/
+  - type: Openable
+    closeable: false
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
+  id: DrinkAleBottleFullGrowler
+DrinkAleBottleFullGrowler
+  name: Magm-Ale growler
+  description: A true dorf's drink of choice. XL growler bottle.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 150
+        reagents:
+        - ReagentId: Ale
+Ale
+          Quantity: 150
+  - type: Label
+    currentLabel: reagent-name-ale
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/alebottle.rsi
+alebottle.rsi/
+  - type: Openable
+    closeable: false
+
+- type: entity
+  parent: [DrinkBottleVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkWaterBottleFull
+DrinkWaterBottleFull
+  name: water bottle
+  description: Simple clean water of unknown origin. You think that maybe you dont want to know it.
+  components:
+  - type: Item
+    size: Small
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Water
+Water
+          Quantity: 30
+  - type: Label
+    currentLabel: reagent-name-water
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/waterbottle.rsi
+waterbottle.rsi/
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: icon-1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 5
+    fillBaseName: icon-
+    inHandsMaxFillLevels: 2
+    inHandsFillBaseName: -fill-
+  - type: Sealable
+
+- type: entity
+NEW!
+  parent: DrinkWaterBottleFull
+  id: DrinkSodaWaterBottleFull
+DrinkSodaWaterBottleFull
+  name: soda water bottle
+  description: Like water, but angry!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 150
+        reagents:
+        - ReagentId: SodaWater
+SodaWater
+          Quantity: 150
+  - type: Label
+    currentLabel: reagent-name-soda-water
+
+- type: entity
+NEW!
+  parent: DrinkWaterBottleFull
+  id: DrinkTonicWaterBottleFull
+DrinkTonicWaterBottleFull
+  name: tonic water bottle
+  description: Like soda water, but angrier maybe? Often sweeter.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 150
+        reagents:
+        - ReagentId: TonicWater
+TonicWater
+          Quantity: 150
+  - type: Label
+    currentLabel: reagent-name-tonic-water
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
+  id: DrinkSakeBottleFull
+DrinkSakeBottleFull
+  name: small sake bottle
+  description: The regret of the next morning seems to be nipping on the bottle too.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Sake
+Sake
+          Quantity: 50
+  - type: Label
+    currentLabel: reagent-name-sake
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/sakebottle.rsi
+sakebottle.rsi/
+  - type: Sealable
+
+
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkJuiceLimeCartonXL
+DrinkJuiceLimeCartonXL
+  name: lime juice XL
+  description: Sweet-sour goodness.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 150
+        reagents:
+        - ReagentId: JuiceLime
+JuiceLime
+          Quantity: 150
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-juice-lime
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/limejuice.rsi
+limejuice.rsi/
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkJuiceOrangeCartonXL
+DrinkJuiceOrangeCartonXL
+  name: orange juice XL
+  description: Full of vitamins and deliciousness!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 150
+        reagents:
+        - ReagentId: JuiceOrange
+JuiceOrange
+          Quantity: 150
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-juice-orange
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/orangejuice.rsi
+orangejuice.rsi/
+
+- type: entity
+NEW!
+  parent: [DrinkBottleVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkCreamCartonXL
+DrinkCreamCartonXL
+  name: milk cream XL
+  description: It's cream. Made from milk. What else did you think you'd find in there?
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 150
+        reagents:
+        - ReagentId: Cream
+Cream
+          Quantity: 150
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-cream
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/cream.rsi
+cream.rsi/
+
+
+
+- type: entity
+NEW!
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkSugarJug
+DrinkSugarJug
+  name: sugar jug
+  suffix: For Drinks, Full
+  description: Some people put this in their coffee...
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: Sugar
+Sugar
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-sugar
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkLemonLimeJug
+DrinkLemonLimeJug
+  name: Smite jug
+  description: A dual citrus sensation.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: LemonLime
+LemonLime
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-lemon-lime
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkMeadJug
+DrinkMeadJug
+  name: mead jug
+  description: Storing mead in a plastic jug should be a crime.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 150
+        reagents:
+        - ReagentId: Mead
+Mead
+          Quantity: 150
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-mead
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkIceJug
+DrinkIceJug
+  name: ice jug
+  description: Stubborn water. Pretty cool.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: Ice
+Ice
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-ice
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkCoconutWaterJug
+DrinkCoconutWaterJug
+  name: coconut water jug
+  description: It's on the inside of the coconut that counts.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: CoconutWater
+CoconutWater
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-coconut-water
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkCoffeeJug
+DrinkCoffeeJug
+  name: coffee jug
+  description: Wake up juice, of the heated kind.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: Coffee
+Coffee
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-coffee
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkTeaJug
+DrinkTeaJug
+  name: tea jug
+  description: The drink of choice for the Bri'ish and hipsters.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: Tea
+Tea
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-tea
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkGreenTeaJug
+DrinkGreenTeaJug
+  name: green tea jug
+  description: It's like tea... but green! great for settling the stomach.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: GreenTea
+GreenTea
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-green-tea
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkIcedTeaJug
+DrinkIcedTeaJug
+  name: iced tea jug
+  description: For when the regular tea is too hot for you. Boohoo.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: IcedTea
+IcedTea
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-iced-tea
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkDrGibbJug
+DrinkDrGibbJug
+  name: Dr. Gibb jug
+  description: 42 different flavours... in a jug!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: DrGibb
+DrGibb
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-dr-gibb
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkRootBeerJug
+DrinkRootBeerJug
+  name: root beer jug
+  description: This drink makes Australians giggle.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: RootBeer
+RootBeer
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-root-beer
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkWaterMelonJuiceJug
+DrinkWaterMelonJuiceJug
+  name: watermelon juice jug
+  description: May include leftover seeds.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: JuiceWatermelon
+JuiceWatermelon
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-juice-watermelon
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkEnergyDrinkJug
+DrinkEnergyDrinkJug
+  name: Red Bool jug
+  description: A jug of Red Bool, with enough caffeine to kill a whole station.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 100
+        reagents:
+        - ReagentId: EnergyDrink
+EnergyDrink
+          Quantity: 100
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-energy-drink
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: CustomDrinkJug
+CustomDrinkJug
+  name: beverage jug
+  description: A jug for storing custom made drinks.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 150
+  - type: Drink
+cans
+
+- type: entity
+  parent: BaseItem
+  id: DrinkCanBaseFull
+DrinkCanBaseFull
+  abstract: true
+  components:
+  - type: Drink
+  - type: Openable
+  - type: Shakeable
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Cola
+Cola
+          Quantity: 30
+        maxVol: 30
+  - type: MixableSolution
+    solution: drink
+  - type: SolutionTransfer
+    canChangeTransferAmount: true
+    maxTransferAmount: 15
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+  - type: Sprite
+    state: icon
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+  - type: FitsInDispenser
+    solution: drink
+  - type: DrawableSolution
+    solution: drink
+  - type: RefillableSolution
+    solution: drink
+  - type: DrainableSolution
+    solution: drink
+  - type: PressurizedSolution
+    solution: drink
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: {state: "icon_open"}
+          False: {state: "icon"}
+  - type: Spillable
+    solution: drink
+  - type: MeleeWeapon
+    soundNoDamage:
+      path: "/Audio/Effects/Fluids/splat.ogg"
+    damage:
+      types:
+        Blunt: 0
+  - type: Tool
+    qualities:
+    - Rolling
+    speedModifier: 0.25 
+  - type: SpaceGarbage
+  - type: TrashOnSolutionEmpty
+    solution: drink
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 50 
+  - type: Tag
+    tags:
+    - DrinkCan
+  - type: DnaSubstanceTrace
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkColaCan
+DrinkColaCan
+  name: Space Cola can
+  description: A sweet, carbonated soft drink.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Cola
+Cola
+          Quantity: 30
+  - type: Tag
+    tags:
+    - Cola
+    - DrinkCan
+    - Recyclable
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/cola.rsi
+cola.rsi/
+  - type: Item
+    sprite: Objects/Consumable/Drinks/cola.rsi
+cola.rsi/
+
+
+- type: entity
+NEW!
+  parent: DrinkColaCan
+  id: DrinkColaCanEmpty
+DrinkColaCanEmpty
+  suffix: empty
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+  - type: Openable
+    opened: true
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/cola.rsi
+cola.rsi/
+    layers:
+    - state: icon_open
+  - type: Item
+    sprite: Objects/Consumable/Drinks/cola.rsi
+cola.rsi/
+  - type: Tag
+    tags:
+    - Cola
+    - DrinkCan
+    - Recyclable
+    - Trash
+
+- type: entity
+  parent: DrinkCanBaseFull
+  id: DrinkIcedTeaCan
+DrinkIcedTeaCan
+  name: iced tea can
+  description: A refreshing can of iced tea.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: IcedTea
+IcedTea
+          Quantity: 30
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/ice_tea_can.rsi
+ice_tea_can.rsi/
+  - type: Item
+    sprite: Objects/Consumable/Drinks/ice_tea_can.rsi
+ice_tea_can.rsi/
+
+- type: entity
+NEW!
+  parent: DrinkCanBaseFull
+  id: DrinkLemonLimeCan
+DrinkLemonLimeCan
+  name: Smite can
+  description: You wanted ORANGE. It gave you Lemon-Lime.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: LemonLime
+LemonLime
+          Quantity: 30
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/lemon-lime.rsi
+lemon-lime.rsi/
+  - type: Item
+    sprite: Objects/Consumable/Drinks/lemon-lime.rsi
+lemon-lime.rsi/
+
+- type: entity
+NEW!
+  parent: DrinkCanBaseFull
+  id: DrinkLemonLimeCranberryCan
+DrinkLemonLimeCranberryCan
+  name: Smite Cranberry can
+  description: Y'all want a Smite Cranberry? Beloved by administrators everywhere. Drink in moderation. A limited run for the holidays!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: LemonLimeCranberry
+LemonLimeCranberry
+          Quantity: 30
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/lemon-lime-cranberry.rsi
+lemon-lime-cranberry.rsi/
+  - type: Item
+    sprite: Objects/Consumable/Drinks/lemon-lime-cranberry.rsi
+lemon-lime-cranberry.rsi/
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeCircle
+          radius: 0.2
+        density: 5
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.1,0.1,0.1"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/punch1.ogg
+    embedOnThrow: True
+  - type: ThrowingAngle
+    angle: 0
+  - type: LandAtCursor
+  - type: Ammo
+    muzzleFlash: null
+  - type: Projectile
+    deleteOnCollide: false
+    onlyCollideWhenShot: true
+    damage:
+      types:
+        Blunt: 1
+        Cold: 2 
+
+- type: entity
+NEW!
+  parent: DrinkCanBaseFull
+  id: DrinkGrapeCan
+DrinkGrapeCan
+  name: grape soda can
+  description: Sweetened drink with a grape flavor and a deep purple color.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: GrapeSoda
+GrapeSoda
+          Quantity: 30
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/purple_can.rsi
+purple_can.rsi/
+  - type: Item
+    sprite: Objects/Consumable/Drinks/purple_can.rsi
+purple_can.rsi/
+
+- type: entity
+NEW!
+  parent: DrinkCanBaseFull
+  id: DrinkRootBeerCan
+DrinkRootBeerCan
+  name: root beer can
+  description: Some of that tasty root beer goodness, now in a portable can!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: RootBeer
+RootBeer
+          Quantity: 30
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/rootbeer.rsi
+rootbeer.rsi/
+  - type: Item
+    sprite: Objects/Consumable/Drinks/rootbeer.rsi
+rootbeer.rsi/
+  - type: Tag
+    tags:
+    - Beer
+
+- type: entity
+NEW!
+  parent: DrinkCanBaseFull
+  id: DrinkSodaWaterCan
+DrinkSodaWaterCan
+  name: soda water can
+  description: Soda water. Why not make a scotch and soda?
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: SodaWater
+SodaWater
+          Quantity: 30
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/sodawater.rsi
+sodawater.rsi/
+
+- type: entity
+NEW!
+  parent: DrinkCanBaseFull
+  id: DrinkSpaceMountainWindCan
+DrinkSpaceMountainWindCan
+  name: Space Solar Wind can
+  description: Blows right through you like a solar wind.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: SpaceMountainWind
+SpaceMountainWind
+          Quantity: 30
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/space_mountain_wind.rsi
+space_mountain_wind.rsi/
+  - type: Item
+    sprite: Objects/Consumable/Drinks/space_mountain_wind.rsi
+space_mountain_wind.rsi/
+
+- type: entity
+NEW!
+  parent: DrinkCanBaseFull
+  id: DrinkSpaceUpCan
+DrinkSpaceUpCan
+  name: Space-Up can
+  description: Tastes like a hull breach in your mouth.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: SpaceUp
+SpaceUp
+          Quantity: 30
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/space-up.rsi
+space-up.rsi/
+  - type: Item
+    sprite: Objects/Consumable/Drinks/space-up.rsi
+space-up.rsi/
+
+- type: entity
+NEW!
+  parent: DrinkCanBaseFull
+  id: DrinkSolDryCan
+DrinkSolDryCan
+  name: Sol Dry can
+  description: Sweet ginger soda from outer space!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: SolDry
+SolDry
+          Quantity: 30
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/sol_dry.rsi
+sol_dry.rsi/
+  - type: Item
+    sprite: Objects/Consumable/Drinks/sol_dry.rsi
+sol_dry.rsi/
+
+- type: entity
+NEW!
+  parent: DrinkCanBaseFull
+  id: DrinkStarkistCan
+DrinkStarkistCan
+  name: Starkist can
+  description: The taste of a star in liquid form. And, a bit of tuna...?
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Starkist
+Starkist
+          Quantity: 30
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/starkist.rsi
+starkist.rsi/
+  - type: Item
+    sprite: Objects/Consumable/Drinks/starkist.rsi
+starkist.rsi/
+
+- type: entity
+NEW!
+  parent: DrinkCanBaseFull
+  id: DrinkTonicWaterCan
+DrinkTonicWaterCan
+  name: tonic water can
+  description: Quinine tastes funny, but at least it'll keep that Space Malaria away.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: TonicWater
+TonicWater
+          Quantity: 30
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/tonic.rsi
+tonic.rsi/
+
+- type: entity
+NEW!
+  parent: DrinkCanBaseFull
+  id: DrinkFourteenLokoCan
+DrinkFourteenLokoCan
+  name: Fourteen Loko can
+  description: The MBO has advised crew members that consumption of Fourteen Loko may result in seizures, blindness, drunkeness, or even death. Please Drink Responsibly.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: FourteenLoko
+FourteenLoko
+          Quantity: 30
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/fourteen_loko.rsi
+fourteen_loko.rsi/
+  - type: Item
+    sprite: Objects/Consumable/Drinks/fourteen_loko.rsi
+fourteen_loko.rsi/
+
+- type: entity
+NEW!
+  parent: DrinkCanBaseFull
+  id: DrinkChangelingStingCan
+DrinkChangelingStingCan
+  name: Changeling Sting can
+  description: You take a tiny sip and feel a burning sensation...
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: ChangelingSting
+ChangelingSting
+          Quantity: 30
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/changelingsting.rsi
+changelingsting.rsi/
+  - type: Item
+    sprite: Objects/Consumable/Drinks/changelingsting.rsi
+changelingsting.rsi/
+
+- type: entity
+NEW!
+  parent: DrinkCanBaseFull
+  id: DrinkDrGibbCan
+DrinkDrGibbCan
+  name: Dr. Gibb can
+  description: A delicious blend of 42 different flavours.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: DrGibb
+DrGibb
+          Quantity: 30
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/dr_gibb.rsi
+dr_gibb.rsi/
+  - type: Item
+    sprite: Objects/Consumable/Drinks/dr_gibb.rsi
+dr_gibb.rsi/
+
+- type: entity
+NEW!
+  parent: DrinkCanBaseFull
+  id: DrinkNukieCan
+DrinkNukieCan
+  name: Blood-red Brew can
+  description: A home-brewed drink made from the crazed minds at the Syndicate. Not recommended by doctors.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Stimulants
+Stimulants
+          Quantity: 5
+        - ReagentId: NuclearCola
+NuclearCola
+          Quantity: 20
+        - ReagentId: Ice
+Ice
+          Quantity: 5
+  - type: Tag
+    tags:
+    - DrinkCan
+    - Recyclable
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/robustnukie.rsi
+robustnukie.rsi/
+  - type: Item
+    sprite: Objects/Consumable/Drinks/robustnukie.rsi
+robustnukie.rsi/
+
+- type: entity
+NEW!
+  parent: DrinkCanBaseFull
+  id: DrinkEnergyDrinkCan
+DrinkEnergyDrinkCan
+  name: Red Bool can
+  description: A can of Red Bool, with enough caffeine to kill a horse.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: EnergyDrink
+EnergyDrink
+          Quantity: 30
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/energy_drink.rsi
+energy_drink.rsi/
+  - type: Item
+    sprite: Objects/Consumable/Drinks/energy_drink.rsi
+energy_drink.rsi/
+
+- type: entity
+NEW!
+  id: DrinkCanPack
+DrinkCanPack
+  parent: BaseStorageItem
+  name: 6pack
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/6pack.rsi
+Objects/Misc/6pack.rsi/
+    layers:
+      - state: plastic-thingy
+      - state: 6pack1
+        map: ["6pack1"]
+        visible: false
+      - state: 6pack2
+        map: ["6pack2"]
+        visible: false
+      - state: 6pack3
+        map: ["6pack3"]
+        visible: false
+      - state: 6pack4
+        map: ["6pack4"]
+        visible: false
+      - state: 6pack5
+        map: ["6pack5"]
+        visible: false
+      - state: 6pack6
+        map: ["6pack6"]
+        visible: false
+  - type: Item
+    size: Normal
+  - type: Storage
+    grid:
+    - 0,0,2,3
+    whitelist:
+      tags:
+        - Cola
+    hideStackVisualsWhenClosed: false
+  - type: StorageFill
+    contents:
+      - id: DrinkColaCan
+DrinkColaCan
+        amount: 6
+  - type: ItemCounter
+    count:
+      tags: [Cola]
+    composite: true
+    layerStates:
+    - 6pack1
+    - 6pack2
+    - 6pack3
+    - 6pack4
+    - 6pack5
+    - 6pack6
+  - type: Appearance
+
+- type: entity
+NEW!
+Вызвано исключение: "System.ArgumentException" в System.Private.CoreLib.dll
+Вызвано исключение: "System.Reflection.TargetInvocationException" в System.Private.CoreLib.dll
+"barhelper.exe" (CoreCLR: clrhost). Загружено "C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.14\ru\System.Xaml.resources.dll". Сборка модуля выполнена без символов.
+Вызвано исключение: "System.Xaml.XamlObjectWriterException" в System.Xaml.dll
+Вызвано исключение: "System.Windows.Markup.XamlParseException" в PresentationFramework.dll
+"Вызов конструктора для типа "barhelper.MainWindow", удовлетворяющего указанным ограничениям привязки, привел к выдаче исключения.": номер строки "6" и позиция в строке "9".
+

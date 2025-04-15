@@ -1,0 +1,10 @@
+./Prototypes/Corvax/Reagents/Consumable\Drink\drinks.yml
+./Prototypes/Reagents/botany.yml
+./Prototypes/Reagents/chemicals.yml
+./Prototypes/Reagents/cleaning.yml
+./Prototypes/Reagents/fun.yml
+./Prototypes/Reagents/Consumable\Drink\base_drink.yml
+./Prototypes/Reagents/Materials\glass.yml
+./Prototypes/Reagents/Materials\materials.yml
+./Prototypes/Reagents/Materials\ores.yml
+./Prototypes/Reagents/Materials\metals.yml

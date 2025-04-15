@@ -1,0 +1,23 @@
+﻿<Window x:Class="barhelper.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:barhelper"
+        mc:Ignorable="d"
+        Title="B.T.C Recipe Book" Height="468" Width="646"
+        ResizeMode="NoResize"
+        KeyDown="Windowkeydown"
+        Name="mainWindow"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        Background="#272537" WindowStyle="None">
+    <Grid x:Name="MainGrid" RenderOptions.EdgeMode="Aliased">
+        <Image x:Name="BGImage" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Images/recipe_window.png" Stretch="None" Width="646" Height="468"/>
+        <Button Style="{StaticResource TopBarButtons}" Content="По имени" x:Name="byname" Margin="8,0,0,438" HorizontalAlignment="Left" Height="30" Width="108" Background="White" Click="AnyTopBarClick" Foreground="Black" FontFamily="Classic Console Neue" MouseEnter="AnyTopBarMouseEnter" MouseLeave="AnyTopBarMouseLeave"/>
+        <Button Style="{StaticResource TopBarButtons}" Content="По вкусу" x:Name="byflavor" Margin="128,0,0,438" HorizontalAlignment="Left" Height="30" Width="108" Background="White" Click="AnyTopBarClick" Foreground="Black" FontFamily="Classic Console Neue" MouseEnter="AnyTopBarMouseEnter" MouseLeave="AnyTopBarMouseLeave"/>
+        <Button Style="{StaticResource TopBarButtons}" Content="По крепости" x:Name="byethanol" Margin="248,0,0,438" HorizontalAlignment="Left" Height="30" Width="144" Background="White" Click="AnyTopBarClick" Foreground="Black" FontFamily="Classic Console Neue" MouseEnter="AnyTopBarMouseEnter" MouseLeave="AnyTopBarMouseLeave"/>
+        <Button Style="{StaticResource TopBarButtons}" Content="Выход" x:Name="exit" Margin="535,0,0,438" HorizontalAlignment="Left" Height="30" Width="74" Background="White" Click="Exitclick" Foreground="Black" FontFamily="Classic Console Neue" MouseEnter="AnyTopBarMouseEnter" MouseLeave="AnyTopBarMouseLeave"/>
+        <Button Style="{StaticResource TopBarButtons}" Content="Случайный" x:Name="random" Margin="404,0,0,438" HorizontalAlignment="Left" Height="30" Width="120" Background="White" Click="RandomButtonClick" Foreground="Black" FontFamily="Classic Console Neue" MouseEnter="AnyTopBarMouseEnter" MouseLeave="AnyTopBarMouseLeave"/>
+        <Image x:Name="IntroImage" HorizontalAlignment="Left" Margin="8,30,0,0" VerticalAlignment="Top" Height="428" Width="630" Source="/Images/recipe_intro.png" Stretch="None"/>
+    </Grid>
+</Window>

@@ -1,0 +1,9 @@
+- type: palette
+  id: fuckyou
+  name: yeah, you
+  colors:
+    olive: "#808000"
+    tan: "#D2B48C"
+    skyblue: "#85CEEB"
+    darkred: "#8B0000"
+    aquamarine: "#7FFFD4"

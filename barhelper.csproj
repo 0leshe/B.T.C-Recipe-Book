@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>jills2.ico</ApplicationIcon>
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <Content Include="jills2.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\icon-front.png" />
+    <Resource Include="Images\morty.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\circle.png" />
+    <Resource Include="Images\jokerge.png" />
+    <Resource Include="Images\spr_textbox_arrow.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="Vintasoft.Barcode.ImageSharp" Version="15.1.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\clacon2.ttf" />
+    <Resource Include="Images\recipe_intro.png" />
+    <Resource Include="Images\recipe_window.png" />
+    <Resource Include="Images\shop_arrow_spr.png" />
+    <Resource Include="Sounds\bikehorn.wav" />
+    <Resource Include="Sounds\bleep_config.wav" />
+    <Resource Include="Sounds\bottle_close1.wav" />
+    <Resource Include="Sounds\bottle_open1.wav" />
+    <Resource Include="Sounds\can_open1.wav" />
+    <Resource Include="Sounds\can_open2.wav" />
+    <Resource Include="Sounds\can_open3.wav" />
+    <Resource Include="Sounds\click_sound.wav" />
+    <Resource Include="Sounds\click_to_start.wav" />
+    <Resource Include="Sounds\jukechange.wav" />
+    <Resource Include="sounds\jukepick.wav"/>
+    <Resource Include="sounds\jukeselect.wav"/>
+    <Resource Include="sounds\loghide.wav"/>
+    <Resource Include="Sounds\logshow.wav" />
+    <Resource Include="sounds\mouse_hover.wav"/>
+    <Resource Include="sounds\prompt.wav"/>
+    <Resource Include="Sounds\vineboom.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SplashScreen Include="Images\rad_spr.png" />
+  </ItemGroup>
+
+</Project>
