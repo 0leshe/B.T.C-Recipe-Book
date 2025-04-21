@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:barhelper"
         mc:Ignorable="d"
         Title="B.T.C Recipe Book" Height="468" Width="646"
         ResizeMode="NoResize"
@@ -19,5 +18,6 @@
         <Button Style="{StaticResource TopBarButtons}" Content="Выход" x:Name="exit" Margin="535,0,0,438" HorizontalAlignment="Left" Height="30" Width="74" Background="White" Click="Exitclick" Foreground="Black" FontFamily="Classic Console Neue" MouseEnter="AnyTopBarMouseEnter" MouseLeave="AnyTopBarMouseLeave"/>
         <Button Style="{StaticResource TopBarButtons}" Content="Случайный" x:Name="random" Margin="404,0,0,438" HorizontalAlignment="Left" Height="30" Width="120" Background="White" Click="RandomButtonClick" Foreground="Black" FontFamily="Classic Console Neue" MouseEnter="AnyTopBarMouseEnter" MouseLeave="AnyTopBarMouseLeave"/>
         <Image x:Name="IntroImage" HorizontalAlignment="Left" Margin="8,30,0,0" VerticalAlignment="Top" Height="428" Width="630" Source="/Images/recipe_intro.png" Stretch="None"/>
+        <Border x:Name="NULLOBJECT" Opacity="0" Focusable="True"/>
     </Grid>
 </Window>
