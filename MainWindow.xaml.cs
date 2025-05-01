@@ -14,7 +14,6 @@ using SixLabors.ImageSharp.Formats.Png;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp;
 using System.Windows.Documents;
-using static System.Windows.Forms.LinkLabel;
 
 namespace barhelper
 {
@@ -48,6 +47,11 @@ namespace barhelper
             { Key.W, "Ц" },
             { Key.X, "Ч" },
             { Key.Y, "Н" },
+            { Key.OemComma, "Б" },
+            { Key.OemSemicolon, "Ж" },
+            { Key.OemPeriod, "Ю" },
+            { Key.OemOpenBrackets, "Х" },
+            { Key.OemQuotes, "Э" },
             { Key.Z, "Я" }
         };
     }
@@ -194,7 +198,7 @@ namespace barhelper
         public string sprite = "glass_clear.rsi/";
         public bool changeColor = true;
         public bool hyperlinkson = false;
-        public string color = "#00000000";
+        public string color = "#FFFFFF";
         public string id = "UNKNOWN";
         public float Ethanol = 0f;
         public string state = "glass";
@@ -579,7 +583,7 @@ namespace barhelper
                     {
                         currentDrink.SatiateThirst = 2;
                     }
-                    else if (line.Contains("flavor"))
+                    else if (line.Contains("flavor: "))
                     {
                         SetFlavor(currentDrink, Regex.Match(line, pattern).Groups[1].Value, currentDrink.flavor);
                     }
@@ -770,6 +774,10 @@ namespace barhelper
                     }
                 }
                 index++;
+            }
+            if (allIdsDrinks.TryGetValue(currentRecipe.id, out Drink? value1))
+            {
+                recipe.Add(value1, currentRecipe);
             }
         }
         private async Task LoadRSIAsync(Drink drink, string path,  List<List<string>> name, string currentNamespace, List<string> namenew)
@@ -963,6 +971,7 @@ namespace barhelper
                     flavor = Regex.Match(line, pattern).Groups[1].Value.Trim();
                 }
             }
+            flavors.Add(id, flavor);
         }
         private static void Log(string content)
         {
@@ -1295,7 +1304,11 @@ namespace barhelper
 
         private void Exitclick(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+                Application.Current.Shutdown();
+        }
+        private void MediaPlayer_MediaFailed(object sender, ExceptionEventArgs e)
+        {
+            MessageBox.Show("Ошибка воспроизведения видео: " + e.ErrorException.Message);
         }
 
         private int mouseHover = 0;
@@ -1966,7 +1979,7 @@ namespace barhelper
             }
             else if (!allDrinks.Contains(drink))
             {
-                RecipeText.Inlines.Add("Не является напитком.");
+                RecipeText.Inlines.Add("Не является напитком");
                 secondGrid.Children.Remove(arrowsthinggrid);
                 lowertextgrid.Margin = new(23, 20, 20, 28);
                 lowertextgrid.RowDefinitions.First().MaxHeight = 125;
@@ -1974,7 +1987,7 @@ namespace barhelper
             }
             else
             {
-                RecipeText.Inlines.Add("Не приготавливается.");
+                RecipeText.Inlines.Add("Не приготавливается");
             }
             if (drinksHistory.Keys.Count > 0)
             {
@@ -2009,25 +2022,7 @@ namespace barhelper
                     Width = 20
                 };
                 arrowHistory.MouseEnter += AnyMouseEnter;
-                arrowHistory.Click += (s, e) =>
-                {
-                    int index = 1;
-                    foreach (var idk in drinksHistory)
-                    {
-                        if (drinksHistory.Keys.Count == index)
-                        {
-                            lockmove = false;
-                            Drink tmp = idk.Key;
-                            amount = idk.Value;
-                            drinksHistory.Remove(idk.Key); 
-                            ResetSpriteTimer();
-                            AudioManager.PlaySound(clickSubFilterButtonSound);
-                            DrawDrink(tmp);
-                            break;
-                        }
-                        index++;
-                    }
-                };
+                arrowHistory.Click += HistoryClick;
                 namegrid.Children.Add(arrowHistory);
             }
             arrowLeftSprite.MouseEnter += AnyMouseEnter;
@@ -2082,6 +2077,25 @@ namespace barhelper
             };
         }
 
+        private void HistoryClick(object s, EventArgs e)
+        {
+            int index = 1;
+            foreach (var idk in drinksHistory)
+            {
+                if (drinksHistory.Keys.Count == index)
+                {
+                    lockmove = false;
+                    Drink tmp = idk.Key;
+                    amount = idk.Value;
+                    drinksHistory.Remove(idk.Key);
+                    ResetSpriteTimer();
+                    AudioManager.PlaySound(clickSubFilterButtonSound);
+                    DrawDrink(tmp);
+                    break;
+                }
+                index++;
+            }
+        }
         private void BottleToggle(bool side = false) 
         {
             bool founded = false;
@@ -2521,6 +2535,8 @@ namespace barhelper
                     ChangeFillnes(-1);
                 else if (e.Key == Key.E)
                     ToggleContaier();
+                else if (e.Key == Key.Q && drinksHistory.Count > 0)
+                    HistoryClick(new(),new());
                 else if (currentDrinkSelected.states.Count > 1)
                     if (e.Key == Key.X)
                         if (Keyboard.IsKeyDown(Key.LeftShift))

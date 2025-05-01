@@ -12,6 +12,15 @@
 
 
   <ItemGroup>
+    <None Update="Textures/**">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Prototypes/**">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Locale/**">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="jills2.ico" />
     <Resource Include="Images\glass_clear.rsi\fill1.png" />
     <Resource Include="Images\glass_clear.rsi\fill2.png" />
@@ -53,5 +62,4 @@
     <Resource Include="Sounds\vineboom.wav" />
     <SplashScreen Include="Images\rad_spr.png" />
   </ItemGroup>
-
 </Project>
