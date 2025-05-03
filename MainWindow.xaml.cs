@@ -183,6 +183,7 @@ namespace barhelper
 
     public class History(Drink reagentobj)
     {
+        public bool hyperlinkson;
         public Drink drink = reagentobj;
         public Drink parentHistory = new();
         public double lastAmount;
@@ -204,6 +205,7 @@ namespace barhelper
         public string state = "glass";
         public Dictionary<string, int> maxLevels = new() { ["glass"] = 9 };
         public int index;
+        public List<Drink> usedin = [];
         public Dictionary<string, bool> openState = new() { ["glass"] = false };
         public Dictionary<string, int> fill = [];
         public Dictionary<string,Dictionary<string, State>> statesCache = [];
@@ -261,7 +263,7 @@ namespace barhelper
         private readonly static List<string> byethanolblacklist = ["Cola", "SodaWater", "Tea", "Ethanol","LemonLime", "HotCocoa"];
         private Drink currentDrinkSelected = new();
         private readonly Dictionary<string, Drink> allIdsDrinks = [];
-        private Dictionary<Drink, float> drinksHistory = [];
+        private List<History> drinksHistory = [];
         private readonly static string errSound = "prompt.wav";
         private readonly static string yeahSound = "loghide.wav";
         private readonly static string welcomeSound = "click_to_start.wav";
@@ -280,7 +282,7 @@ namespace barhelper
         private readonly SortedDictionary<string, List<Drink>> byflavordict = [];
         private readonly Dictionary<string, string> palette = [];
         private readonly Dictionary<Drink, Recipe> recipe = [];
-        private readonly List<string> recipeunbuilded = [];
+        private readonly Dictionary<string, List<Drink>> recipeunbuilded = [];
         private readonly static FontFamily font = new(new Uri("pack://application:,,,/"), "./Fonts/#Classic Console Neue");
         private readonly Style filterbuttonstyle;
         private string currentDrinks = "";
@@ -293,6 +295,7 @@ namespace barhelper
         private readonly Dictionary<string, string> flavors = [];
         private readonly Grid secondGrid = new();
         private DispatcherTimer drinksSpriteTime = new() { Interval = TimeSpan.FromHours(42)};
+        private DispatcherTimer drinksFillSpriteTime = new() { Interval = TimeSpan.FromHours(42)};
         private short filtersection = 0;
         private readonly static Random rand = new();
         private readonly Dictionary<string, CroppedBitmap> iconStatePrefab = [];
@@ -307,6 +310,7 @@ namespace barhelper
         private readonly BitmapImage circle = new();
         private readonly BitmapImage jokerge = new();
         private readonly BitmapImage iconFront;
+        private List<Drink> currentDrinksList;
 
         private List<Drink> GetCurrentDrinks(string name)
         {
@@ -321,18 +325,14 @@ namespace barhelper
         private string GetColor(string name)
         {
             if (palette.TryGetValue(name, out string? value))
-            {
                 return value;
-            }
             return "KeyNotFound";
         }
 
         private string GetName(Drink wanted)
         {
             if (localization.TryGetValue(wanted.name, out string? value))
-            {
                 return CapitalizeWords(value);
-            }
             return "KeyNotFound";
         }
         private string GetFlavor(Drink wanted, bool removeidkfuckyou = false)
@@ -340,41 +340,28 @@ namespace barhelper
             if (localization.TryGetValue(flavors[wanted.flavor], out string? result))
             {
                 if (!removeidkfuckyou)
-                {
                     result = result.Replace("как ", "");
-                }
                 return result;
             }
             return "KeyNotFound";
         }
         private void SetFlavor(Drink wanted, string name, string ifnot = "")
         {
-            if (flavors.TryGetValue(name, out string? value))
-            {
-                if (localization.ContainsKey(value))
-                {
+            if (flavors.TryGetValue(name, out string? value) && localization.ContainsKey(value))
                     wanted.flavor = name;
-                }
-            }
             else
-            {
                 wanted.flavor = ifnot;
-            }
         }
         private string GetDesc(Drink wanted)
         {
             if (localization.ContainsKey(wanted.name.Replace("name", "desc")))
-            {
                 return localization[wanted.name.Replace("name", "desc")];
-            }
             return "KeyNotFound";
         }
         private string GetPthysDesc(Drink wanted)
         {
             if (localization.TryGetValue(wanted.physicalDesc, out string? value))
-            {
                 return value;
-            }
             return "KeyNotFound";
         }
         private void LoadLocalization(string locPath)
@@ -387,9 +374,7 @@ namespace barhelper
                 {
                     string[] parts = line.Split(" = ", StringSplitOptions.None);
                     if (localization.ContainsKey(parts[0]))
-                    {
                         localization[parts[0]] = parts[1];
-                    }
                     else
                         localization.Add(parts[0], parts[1]);
                 }
@@ -440,9 +425,7 @@ namespace barhelper
                         foreach (string idk in suffixblacklist)
                         {
                             if (ourID.Contains(idk))
-                            {
                                 failure = true;
-                            }
                         }
                         if (!failure)
                         {
@@ -452,9 +435,7 @@ namespace barhelper
                             LoadRSI(drink, sprite, fileListsAdditional[maxLevel], currentthing, namesListsAdditional[maxLevel]);
                             drink.changeColor = was;
                             if (!drink.states[currentthing].ContainsKey("fill1"))
-                            {
                                 maxLevel = 0;
-                            }
                             drink.fill.Add(currentthing, maxLevel);
                             drink.openState.Add(currentthing, true);
                             drink.maxLevels[currentthing] = maxLevel;
@@ -468,25 +449,15 @@ namespace barhelper
                     skipFirst = true;
                 }
                 else if (line.Contains("sprite:") && sprite == "(mdr)grapejuice.rsi/")
-                {
                     sprite = Regex.Match(line, pattern).Groups[1].Value.Replace("Objects/Consumable/Drinks/", "") + "/";
-                }
                 else if (line.Contains("ReagentId: "))
-                {
                     id = Regex.Match(line, pattern).Groups[1].Value.Trim();
-                }
                 else if (line.Contains("id: ") && id == "")
-                {
                     ourID = Regex.Match(line, pattern).Groups[1].Value.Trim();
-                }
                 else if (line.Contains("parent: "))
-                {
                     parent = Regex.Match(line, pattern).Groups[1].Value.Trim();
-                }
                 else if (line.Contains("maxFillLevels"))
-                {
                     maxLevel = int.Parse(Regex.Match(line, pattern).Groups[1].Value);
-                }
             }
             if (id != "" && sprite != "(mdr)grapejuice.rsi/" && !blacklist.Contains(ourID) && skipFirst && !parentblacklist.Contains(parent))
             {
@@ -494,9 +465,7 @@ namespace barhelper
                 foreach (string idk in suffixblacklist)
                 {
                     if (ourID.Contains(idk))
-                    {
                         failure = true;
-                    }
                 }
                 if (!failure)
                 {
@@ -513,9 +482,7 @@ namespace barhelper
                     LoadRSI(drink, sprite, fileList, currentthing, namesList);
                     drink.changeColor = was;
                     if (!drink.states[currentthing].ContainsKey("fill1"))
-                    {
                         maxLevel = 0;
-                    }
                     drink.fill.Add(currentthing, maxLevel);
                     drink.openState.Add(currentthing, true);
                     drink.maxLevels[currentthing] = maxLevel;
@@ -549,9 +516,11 @@ namespace barhelper
                             }
                             else
                             {
-                                if (recipeunbuilded.Contains(currentDrink.id) && await SpriteLoadAndValidate(currentDrink))
+                                if (recipeunbuilded.ContainsKey(currentDrink.id) && await SpriteLoadAndValidate(currentDrink))
                                 {
                                     lock (allIdsDrinks) allIdsDrinks.Add(currentDrink.id, currentDrink);
+                                    foreach (Drink used in recipeunbuilded[currentDrink.id])
+                                        currentDrink.usedin.Add(used);
                                     lock (recipeunbuilded) recipeunbuilded.Remove(currentDrink.id);
                                 }
                             }
@@ -576,45 +545,25 @@ namespace barhelper
                         currentDrink.SatiateThirst = 4;
                     }
                     else if (line.Contains("parent: BaseJuice"))
-                    {
                         currentDrink.flavor = "sweet";
-                    }
                     else if (line.Contains("parent: BaseSoda"))
-                    {
                         currentDrink.SatiateThirst = 2;
-                    }
                     else if (line.Contains("flavor: "))
-                    {
                         SetFlavor(currentDrink, Regex.Match(line, pattern).Groups[1].Value, currentDrink.flavor);
-                    }
                     else if (line.Contains("physicalDesc"))
-                    {
                         currentDrink.physicalDesc = Regex.Match(line, pattern).Groups[1].Value;
-                    }
                     else if (line.Contains("name"))
-                    {
                         currentDrink.name = Regex.Match(line, pattern).Groups[1].Value;
-                    }
                     else if (line.Contains("factor"))
-                    {
                         currentDrink.SatiateThirst = float.Parse(Regex.Match(line, pattern).Groups[1].Value, CultureInfo.InvariantCulture);
-                    }
                     else if (line.Contains("metamorphicMaxFillLevels"))
-                    {
                         currentDrink.maxLevels["glass"] = int.Parse(Regex.Match(line, pattern).Groups[1].Value);
-                    }
                     else if (line.Contains("sprite:"))
-                    {
                         currentDrink.sprite = Regex.Match(line, pattern).Groups[1].Value.Replace("Objects/Consumable/Drinks/", "") + "/";
-                    }
                     else if (line.Contains("id:"))
-                    {
                         currentDrink.id = Regex.Match(line, pattern).Groups[1].Value.Trim();
-                    }
                     else if (line.Contains("metamorphicChangeColor: "))
-                    {
                         currentDrink.changeColor = bool.Parse(Regex.Match(line, pattern).Groups[1].Value);
-                    }
                     else if (line.Contains("color: "))
                     {
                         currentDrink.color = Regex.Match(line, pattern).Groups[1].Value.Replace("\"", "").Trim().ToUpper();
@@ -622,17 +571,11 @@ namespace barhelper
                             currentDrink.color = GetColor(currentDrink.color.ToLower());
                     }
                     else if (line.Contains("Poison: "))
-                    {
                         currentDrink.Poison = float.Parse(Regex.Match(line, pattern).Groups[1].Value, CultureInfo.InvariantCulture);
-                    }
                     else if (line.Contains("- !type:AdjustReagent") && content[index + 1].Contains("reagent: Ethanol"))
-                    {
                         currentDrink.Ethanol = float.Parse(Regex.Match(Modstring(content[index + 2]), pattern).Groups[1].Value, CultureInfo.InvariantCulture);
-                    }
                     else if (line.Contains(" Alcohol:"))
-                    {
                         skiptillnext = true;
-                    }
                 }
                 index++;
             }
@@ -648,7 +591,7 @@ namespace barhelper
                 }
                 else
                 {
-                    if (recipeunbuilded.Contains(currentDrink.id) && await SpriteLoadAndValidate(currentDrink))
+                    if (recipeunbuilded.ContainsKey(currentDrink.id) && await SpriteLoadAndValidate(currentDrink))
                     {
                         allIdsDrinks.Add(currentDrink.id, currentDrink);
                         recipeunbuilded.Remove(currentDrink.id);
@@ -670,9 +613,7 @@ namespace barhelper
                     colorsPassed = false;
                     founded = false;
                     if (content[index + 1].Contains("id: "))
-                    {
                         founded = true;
-                    }
                 }
                 if (founded && colorsPassed)
                 {
@@ -682,19 +623,13 @@ namespace barhelper
                         parts[0] = parts[0].Replace("\"", "").Replace("#", "").Trim();
                         parts[1] = parts[1].Replace("\"", "").Trim();
                         if (palette.ContainsKey(parts[0]))
-                        {
                             palette[parts[0]] = parts[1];
-                        }
                         else
-                        {
                             palette.Add(parts[0], parts[1]);
-                        }
                     }
                 }
                 if (line.Contains("colors:"))
-                {
                     colorsPassed = true;
-                }
                 index++;
             }
         }
@@ -729,13 +664,13 @@ namespace barhelper
                                 currentRecipe.input.Add(name, amount);
                             }
                             else
-                            {
                                 skipFirstRecipe = true;
-                            }
                             name = line[..line.IndexOf(':')].Trim();
-                            if (!allIdsDrinks.ContainsKey(name))
+                            if (!allIdsDrinks.ContainsKey(name) && allIdsDrinks.ContainsKey(currentRecipe.id))
                             {
-                                recipeunbuilded.Add(name);
+                                if (!recipeunbuilded.ContainsKey(name))
+                                    recipeunbuilded.Add(name, []);
+                                recipeunbuilded[name].Add(allIdsDrinks[currentRecipe.id]);
                             }
                         }
                         else
@@ -751,33 +686,31 @@ namespace barhelper
                     {
                         if (skipFirst && allIdsDrinks.TryGetValue(currentRecipe.id, out Drink? value))
                         {
+                            foreach (string id in currentRecipe.input.Keys)
+                                if (allIdsDrinks.TryGetValue(id, out Drink? drink))
+                                    drink.usedin.Add(value);
                             recipe.Add(value, currentRecipe);
                         }
                         skipFirst = true;
                         currentRecipe = new();
                     }
                     if (line.Contains("- Stir"))
-                    {
                         currentRecipe.action = "Stir";
-                    }
                     if (line.Contains("- Shake"))
-                    {
                         currentRecipe.action = "Shake";
-                    }
                     if (line.Contains("id: "))
-                    {
                         currentRecipe.id = Regex.Match(line, pattern).Groups[1].Value;
-                    }
                     if (line.Contains("reactants:"))
-                    {
                         recipeBuild = true;
-                    }
                 }
                 index++;
             }
             if (allIdsDrinks.TryGetValue(currentRecipe.id, out Drink? value1))
             {
                 recipe.Add(value1, currentRecipe);
+                foreach (string id in currentRecipe.input.Keys)
+                    if (allIdsDrinks.TryGetValue(id, out Drink? drink))
+                        drink.usedin.Add(value1);
             }
         }
         private async Task LoadRSIAsync(Drink drink, string path,  List<List<string>> name, string currentNamespace, List<string> namenew)
@@ -977,6 +910,7 @@ namespace barhelper
         {
             Debug.WriteLine(content);
         }
+
         private void Reloadlocale(string path)
         {
             string[] files = Directory.GetFiles(path);
@@ -995,7 +929,6 @@ namespace barhelper
             string[] files = Directory.GetFiles(path);
             foreach (string file in files)
             {
-
                 LoadPalette(file);
             }
             string[] directories = Directory.GetDirectories(path);
@@ -1004,7 +937,6 @@ namespace barhelper
                 ReloadPalettes(directory);
             }
         }
-
 
         private async Task LoadDrinks()
         {
@@ -1041,13 +973,9 @@ namespace barhelper
                     bynamedict.Add(first, value);
                 }
                 if (!byflavordict.ContainsKey(CapitalizeWords(GetFlavor(currentDrink))))
-                {
                     byflavordict.Add(CapitalizeWords(GetFlavor(currentDrink)), []);
-                }
                 if (!byethanoldict.ContainsKey(currentDrink.Ethanol.ToString(CultureInfo.InvariantCulture)))
-                {
                     byethanoldict.Add(currentDrink.Ethanol.ToString(CultureInfo.InvariantCulture), []);
-                }
 
                 value.Add(currentDrink);
                 byflavordict[CapitalizeWords(GetFlavor(currentDrink))].Add(currentDrink);
@@ -1058,9 +986,7 @@ namespace barhelper
             foreach (var list in byflavordict)
             {
                 if (list.Value.Count == 1)
-                {
                     keysToRemove.Add(list.Key);
-                }
             }
             foreach (var key in keysToRemove)
             {
@@ -1070,9 +996,7 @@ namespace barhelper
             foreach (Drink drink in byethanoldict["0"])
             {
                 if (!recipe.ContainsKey(drink))
-                {
                     keysToRemoveDrink.Add(drink);
-                }
             }
             foreach (var key in keysToRemoveDrink)
             {
@@ -1147,24 +1071,24 @@ namespace barhelper
             LoadAdditionalContainers("./Prototypes/drinks-cartons.yml");
 #pragma warning restore CS4014
             arrowleftimage.BeginInit();
+            arrowrightimage.BeginInit();
+            arrowhistoryimage.BeginInit();
+            jokerge.BeginInit();
+            morty.BeginInit();
+            circle.BeginInit();
+            jokerge.UriSource = new Uri("/Images/jokerge.png", UriKind.RelativeOrAbsolute);
+            circle.UriSource = new Uri("/Images/circle.png", UriKind.RelativeOrAbsolute);
+            morty.UriSource = new Uri("/Images/morty.png", UriKind.RelativeOrAbsolute);
+            arrowrightimage.UriSource = new Uri("/Images/shop_arrow_spr.png", UriKind.RelativeOrAbsolute);
             arrowleftimage.UriSource = new Uri("/Images/shop_arrow_spr.png", UriKind.RelativeOrAbsolute);
             arrowleftimage.Rotation = Rotation.Rotate180;
-            arrowleftimage.EndInit();
-            arrowrightimage.BeginInit();
-            arrowrightimage.UriSource = new Uri("/Images/shop_arrow_spr.png", UriKind.RelativeOrAbsolute);
-            arrowrightimage.EndInit();
-            arrowhistoryimage.BeginInit();
             arrowhistoryimage.UriSource = new Uri("/Images/spr_textbox_arrow.png", UriKind.RelativeOrAbsolute);
             arrowhistoryimage.Rotation = Rotation.Rotate180;
+            arrowleftimage.EndInit();
+            arrowrightimage.EndInit();
             arrowhistoryimage.EndInit();
-            jokerge.BeginInit();
-            jokerge.UriSource = new Uri("/Images/jokerge.png", UriKind.RelativeOrAbsolute);
             jokerge.EndInit();
-            circle.BeginInit();
-            circle.UriSource = new Uri("/Images/circle.png", UriKind.RelativeOrAbsolute);
             circle.EndInit();
-            morty.BeginInit();
-            morty.UriSource = new Uri("/Images/morty.png", UriKind.RelativeOrAbsolute);
             morty.EndInit();
 
             InitializeComponent();
@@ -1188,11 +1112,11 @@ namespace barhelper
         }
         private void StandartClick(int newSelected)
         {
-            AudioManager.PlaySound("jukeselect.wav");
             IntroImage.Opacity = 0;
             selected = newSelected;
             if (selectedWas != selected)
             {
+                AudioManager.PlaySound("jukeselect.wav");
                 ((Button)MainGrid.Children[selected]).Background = Brushes.Black;
                 ((Button)MainGrid.Children[selected]).Foreground = Brushes.White;
                 if (selectedWas > 0 && mouseHover != selectedWas)
@@ -1200,8 +1124,11 @@ namespace barhelper
                     ((Button)MainGrid.Children[selectedWas]).Background = Brushes.White;
                     ((Button)MainGrid.Children[selectedWas]).Foreground = Brushes.Black;
                 }
+                needBuildOUT = true;
                 selectedWas = selected;
             }
+            else if (selected == 5 || filtersection != 1)
+                AudioManager.PlaySound("jukeselect.wav");
         }
         private static string CapitalizeWords(string input)
         {
@@ -1258,10 +1185,12 @@ namespace barhelper
             }
         }
 
+        private bool needBuildOUT = true;
         private void FilterBuild()
         {
             ResetSpriteTimer();
             drinksHistory = [];
+            bool needBuild = false;
             if (filtersection != 1)
             {
                 secondGrid.Children.Clear();
@@ -1278,22 +1207,27 @@ namespace barhelper
                 Grid filterNames = new() { Margin = new Thickness(24, 90, 24, 20) };
                 secondGrid.Children.Add(searchbyLabel);
                 secondGrid.Children.Add(filterNames);
+                needBuild = true;
             }
             switch (currentDrinks)
             {
                 case "byname":
                     ((TextBlock)secondGrid.Children[0]).Text = "По имени:";
-                    BuildGrid(bynamedict, (Grid)secondGrid.Children[1]);
+                    if (needBuild || needBuildOUT)
+                        BuildGrid(bynamedict, (Grid)secondGrid.Children[1]);
                     break;
                 case "byethanol":
                     ((TextBlock)secondGrid.Children[0]).Text = "По крепости:";
-                    BuildGrid(byethanoldict, (Grid)secondGrid.Children[1]);
+                    if (needBuild || needBuildOUT)
+                        BuildGrid(byethanoldict, (Grid)secondGrid.Children[1]);
                     break;
                 case "byflavor":
                     ((TextBlock)secondGrid.Children[0]).Text = "По вкусу:";
-                    BuildGrid(byflavordict, (Grid)secondGrid.Children[1]);
+                    if (needBuild || needBuildOUT)
+                        BuildGrid(byflavordict, (Grid)secondGrid.Children[1]);
                     break;
             }
+            needBuildOUT = false;
         }
         private void AnyTopBarClick(object sender, RoutedEventArgs e)
         {
@@ -1305,10 +1239,6 @@ namespace barhelper
         private void Exitclick(object sender, RoutedEventArgs e)
         {
                 Application.Current.Shutdown();
-        }
-        private void MediaPlayer_MediaFailed(object sender, ExceptionEventArgs e)
-        {
-            MessageBox.Show("Ошибка воспроизведения видео: " + e.ErrorException.Message);
         }
 
         private int mouseHover = 0;
@@ -1343,7 +1273,6 @@ namespace barhelper
             e.Handled = !MyRegex().IsMatch(((TextBox)sender).Text + e.Text); ;
         }
 
-        private List<Drink> currentDrinksList;
         private void DrawSubfiler(string currentDrinksName)
         {
             filtersection = 2;
@@ -1389,7 +1318,7 @@ namespace barhelper
                 Foreground = Brushes.White
             };
             Grid.SetColumn(Drinkname, 1);
-            Button topbarbutton = new()
+            Button randbutton = new()
             {
                 HorizontalAlignment = HorizontalAlignment.Right,
                 VerticalAlignment = VerticalAlignment.Center,
@@ -1400,30 +1329,22 @@ namespace barhelper
                 Height = 35,
                 Content = "Случайный"
             };
-            topbarbutton.MouseEnter += AnyMouseEnter;
-            Grid.SetColumn(Drinkname, 1);
-            Grid.SetColumn(topbarbutton, 2);
-            topbargrid.Children.Add(Drinkname);
-            topbargrid.Children.Add(topbarbutton);
-            topbargrid.Children.Add(name);
-            secondGrid.Children.Add(topbargrid);
-            secondGrid.Children.Add(gridlol);
-            while (gridlol.RowDefinitions.Count > 0)
-            {
-                gridlol.RowDefinitions.RemoveAt(0);
-            }
-            currentDrinksList = GetCurrentDrinks(currentDrinksName);
-            topbarbutton.Click += (s, e) =>
+            randbutton.Click += (s, e) =>
             {
                 AudioManager.PlaySound(clickSubFilterButtonSound);
                 amount = 30f;
                 DrawDrink(currentDrinksList[rand.Next(currentDrinksList.Count)]);
             };
+            randbutton.MouseEnter += AnyMouseEnter;
+            Grid.SetColumn(Drinkname, 1);
+            Grid.SetColumn(randbutton, 2);
+            topbargrid.Children.Add(Drinkname);
+            topbargrid.Children.Add(randbutton);
+            topbargrid.Children.Add(name);
+            secondGrid.Children.Add(topbargrid);
+            secondGrid.Children.Add(gridlol);
+            currentDrinksList = GetCurrentDrinks(currentDrinksName);
 
-            while (gridlol.ColumnDefinitions.Count > 0)
-            {
-                gridlol.ColumnDefinitions.RemoveAt(0);
-            }
             int columns = (int)Math.Ceiling(currentDrinksList.Count / (double)6);
             int maxRows = 8;
             for (int i = 0; i < maxRows; i++)
@@ -1582,22 +1503,6 @@ namespace barhelper
             Grid.SetRow(lowerText, 2);
             lowertextgrid.Children.Add(lowerText);
             lowertextgrid.Children.Add(description);
-            Grid arrowsthinggrid = new() 
-            {
-                Margin = new Thickness(22, 0, 0, 25),
-                VerticalAlignment = VerticalAlignment.Bottom,
-                HorizontalAlignment = HorizontalAlignment.Left
-            };
-            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width =new(30)});
-            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new(7) });
-            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Auto });
-            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new(7) });
-            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new(30) });
-            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new(7) });
-            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Auto });
-            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new(2) });
-            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Auto});
-            arrowsthinggrid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
             Button arrowLeft = new()
             {
                 VerticalAlignment = VerticalAlignment.Center,
@@ -1643,6 +1548,24 @@ namespace barhelper
                 Text = (drink.index + 1).ToString() + "/" + allDrinks.Count.ToString()
             };
             Grid.SetColumn(middleArrowText, 2);
+            Grid arrowsthinggrid = new()
+            {
+                Margin = new Thickness(22, 0, 0, 25),
+                VerticalAlignment = VerticalAlignment.Bottom,
+                HorizontalAlignment = HorizontalAlignment.Left
+            };
+            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new(30) });
+            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new(7) });
+            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Auto });
+            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new(7) });
+            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new(30) });
+            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new(7) });
+            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Auto });
+            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new(2) });
+            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Auto });
+            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new(2) });
+            arrowsthinggrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Auto });
+            arrowsthinggrid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
             arrowsthinggrid.Children.Add(arrowRightImage);
             arrowsthinggrid.Children.Add(arrowRight);
             arrowsthinggrid.Children.Add(middleArrowText);
@@ -1687,7 +1610,7 @@ namespace barhelper
             amountChange.PreviewTextInput += (s, e) =>
             {
                 if (!(int.TryParse(((TextBox)s).Text + e.Text, out int value) && value >= 0 && value <= 100 || "1984".Contains(((TextBox)s).Text + e.Text)))
-                { e.Handled = true; }
+                    e.Handled = true;
             };
             amountChange.GotFocus += (s, e) => typing = true;
             amountChange.LostFocus += (s, e) => typing = false;
@@ -1760,6 +1683,25 @@ namespace barhelper
                 VerticalAlignment = VerticalAlignment.Top,
                 HorizontalAlignment = HorizontalAlignment.Right,
             };
+            if (drink.usedin.Count > 0)
+            {
+                Button usedin = new()
+                {
+                    VerticalAlignment = VerticalAlignment.Bottom,
+                    HorizontalAlignment = HorizontalAlignment.Right,
+                    Margin = new Thickness(0,0,28,26),
+                    Style = filterbuttonstyle,
+                    Foreground = Brushes.White,
+                    Height = 30,
+                    FontFamily = font,
+                    Content = "Используется"
+                };
+                usedin.MouseEnter += AnyMouseEnter;
+                usedin.Click += UsedInClick;
+                secondGrid.Children.Add(usedin);
+            }
+            arrowsthinggrid.Children.Add(amountChange);
+            arrowsthinggrid.Children.Add(amountChangeText);
             imagesprtiegrid.ColumnDefinitions.Add(new ColumnDefinition());
             imagesprtiegrid.ColumnDefinitions.Add(new ColumnDefinition());
             imagesprtiegrid.ColumnDefinitions.Add(new ColumnDefinition());
@@ -1775,16 +1717,16 @@ namespace barhelper
                 Width = 160,
                 Source = drink.GetSprite("icon")
             };
+            RenderOptions.SetBitmapScalingMode(drinkGlassSprite, BitmapScalingMode.NearestNeighbor);
             drinkFillSprite = new()
             {
                 VerticalAlignment = VerticalAlignment.Center,
                 HorizontalAlignment = HorizontalAlignment.Center,
                 Width = 160,
             };
+            RenderOptions.SetBitmapScalingMode(drinkFillSprite, BitmapScalingMode.NearestNeighbor);
             if (drink.states[drink.state].ContainsKey("fill1") && currentfillness > 0)
-            {
                 drinkFillSprite.Source = drink.GetSprite(fillstring, spritenum);
-            }
             Grid.SetColumnSpan(drinkGlassSprite, 3);
             Grid.SetColumnSpan(drinkFillSprite, 3);
             Button arrowLeftSprite = new()
@@ -1827,14 +1769,8 @@ namespace barhelper
                 Foreground = Brushes.White,
                 Text = currentfillness.ToString() + "/" + drink.maxLevels[drink.state].ToString()
             };
-            arrowRightSprite.Click += (s, e) =>
-            {
-                ChangeFillnes(1);
-            };
-            arrowLeftSprite.Click += (s, e) =>
-            {
-                ChangeFillnes(-1);
-            };
+            arrowRightSprite.Click += (s, e) => ChangeFillnes(1);
+            arrowLeftSprite.Click += (s, e) => ChangeFillnes(-1);
             Grid.SetRow(arrowLeftSprite, 2);
             Grid.SetRow(arrowLeftImageSprite, 2);
 
@@ -1852,8 +1788,6 @@ namespace barhelper
             imagesprtiegrid.Children.Add(middleArrowTextSprite);
             imagesprtiegrid.Children.Add(drinkGlassSprite);
             imagesprtiegrid.Children.Add(drinkFillSprite);
-            arrowsthinggrid.Children.Add(amountChange);
-            arrowsthinggrid.Children.Add(amountChangeText);
             secondGrid.Children.Add(arrowsthinggrid);
             onsprite = new()
             {
@@ -1956,40 +1890,41 @@ namespace barhelper
             };
             if (recipe.TryGetValue(drink, out Recipe? drinkRecipe))
             {
-                RecipeText.Inlines.Add(new Run("Приготовление\n"));
-                short totalVolume = 0;
+                Run start;
                 double coficent = Math.Ceiling(amount / drinkRecipe.output);
                 int index = 0;
+                double totalVolume = amount - Math.Ceiling(amount / drinkRecipe.output) * drinkRecipe.output;
+                if (drinkRecipe.action == "Shake" || totalVolume < 0)
+                    start = new("Приготавливается в шейкере\n");
+                else
+                    start = new("Приготавливается в стакане\n");
+                RecipeText.Inlines.Add(start);
                 foreach (var reagent in drinkRecipe.input)
                 {
                     if (allIdsDrinks.TryGetValue(reagent.Key, out Drink? reagentobj))
                     {
                         index++;
                         short toadd = (short)Math.Ceiling(coficent * reagent.Value);
-                        totalVolume += toadd;
-                        BuildHyperlink(RecipeText, drink, amount, coficent * reagent.Value, reagentobj, WrapText(GetName(reagentobj) + " (" + toadd.ToString(CultureInfo.InvariantCulture) + ")",26));
+                        BuildHyperlink(RecipeText, drink, amount, coficent * reagent.Value, reagentobj, WrapText(GetName(reagentobj) + " (" + toadd.ToString(CultureInfo.InvariantCulture) + ")\n",26));
                     }
                     else
                     {
                         Debug.WriteLine(reagent.Key + " MISSING");
-                        RecipeText.Inlines.Add("Ой, не нашли ☺\n");
+                        RecipeText.Inlines.Add("Ой, не нашли " + reagent.Key + "☺\n");
                     }
                 }
                 SolutionDone(RecipeText, drink, amount, index * 3);
+
             }
             else if (!allDrinks.Contains(drink))
             {
                 RecipeText.Inlines.Add("Не является напитком");
                 secondGrid.Children.Remove(arrowsthinggrid);
-                lowertextgrid.Margin = new(23, 20, 20, 28);
-                lowertextgrid.RowDefinitions.First().MaxHeight = 125;
                 lockmove = true;
             }
             else
-            {
                 RecipeText.Inlines.Add("Не приготавливается");
-            }
-            if (drinksHistory.Keys.Count > 0)
+            if (drinksHistory.Count > 0)
             {
                 TextBlock count = new()
                 {
@@ -2007,7 +1942,6 @@ namespace barhelper
                     Source = arrowhistoryimage,
                     Height = 17
                 };
-                RenderOptions.SetBitmapScalingMode(arrowHistoryImage, BitmapScalingMode.NearestNeighbor);
                 name.Margin = new Thickness(50, 46, 20, 20);
                 Grid.SetRow(count, 1);
                 namegrid.Children.Add(count);
@@ -2027,8 +1961,6 @@ namespace barhelper
             }
             arrowLeftSprite.MouseEnter += AnyMouseEnter;
             arrowRightSprite.MouseEnter += AnyMouseEnter;
-            RenderOptions.SetBitmapScalingMode(drinkGlassSprite, BitmapScalingMode.NearestNeighbor);
-            RenderOptions.SetBitmapScalingMode(drinkFillSprite, BitmapScalingMode.NearestNeighbor);
             secondGrid.Children.Add(namegrid);
             secondGrid.Children.Add(lowertextgrid);
             secondGrid.Children.Add(imagesprtiegrid);
@@ -2052,17 +1984,17 @@ namespace barhelper
             if (drink.states[drink.state].TryGetValue("icon", out Dictionary<short, CroppedBitmap>? icon) && icon.Count > 1)
             {
                 short spritenumglass = 0;
-                drinksSpriteTime.Tick += (s, e) =>
+                drinksFillSpriteTime.Tick += (s, e) =>
                 {
                     if (spritenumglass >= icon.Count - 1)
                         spritenumglass = 0;
                     drinkGlassSprite.Source = drink.GetSprite("icon", spritenumglass); ;
-                    drinksSpriteTime.Interval = TimeSpan.FromMilliseconds(drink.GetJSON("icon").delays[0][spritenumglass] * 1000);
+                    drinksFillSpriteTime.Interval = TimeSpan.FromMilliseconds(drink.GetJSON("icon").delays[0][spritenumglass] * 1000);
                     spritenumglass++;
                 };
-                drinksSpriteTime.Interval = TimeSpan.FromMilliseconds(42);
+                drinksFillSpriteTime.Interval = TimeSpan.FromMilliseconds(42);
             }
-            drinksSpriteTime.Start();
+            StartSpriteTimer();
             if (currentfillness == 0)
                 arrowLeftImageSprite.Opacity = 0.75;
             if (currentfillness == currentDrinkSelected.maxLevels[currentDrinkSelected.state])
@@ -2071,30 +2003,36 @@ namespace barhelper
         private void ResetSpriteTimer()
         {
             drinksSpriteTime.Stop();
+            drinksFillSpriteTime.Stop();
             drinksSpriteTime = new()
             {
                 Interval = TimeSpan.FromHours(42)
             };
+            drinksFillSpriteTime = new()
+            {
+                Interval = TimeSpan.FromHours(42)
+            };
+        }
+        private void StartSpriteTimer()
+        {
+            drinksSpriteTime.Start();
+            drinksFillSpriteTime.Start();
         }
 
         private void HistoryClick(object s, EventArgs e)
         {
-            int index = 1;
-            foreach (var idk in drinksHistory)
-            {
-                if (drinksHistory.Keys.Count == index)
-                {
-                    lockmove = false;
-                    Drink tmp = idk.Key;
-                    amount = idk.Value;
-                    drinksHistory.Remove(idk.Key);
-                    ResetSpriteTimer();
-                    AudioManager.PlaySound(clickSubFilterButtonSound);
-                    DrawDrink(tmp);
-                    break;
-                }
-                index++;
-            }
+            lockmove = false;
+            History historyobj = drinksHistory.Last();
+            Drink tmp = historyobj.parentHistory;
+            if (historyobj.hyperlinkson)
+                amount = (float)historyobj.lastAmount;
+            else
+                amount = historyobj.currentAmount;
+            drinksHistory.Remove(historyobj);
+            ResetSpriteTimer();
+            AudioManager.PlaySound(clickSubFilterButtonSound);
+            DrawDrink(tmp);
+            filtersection = 3;
         }
         private void BottleToggle(bool side = false) 
         {
@@ -2113,7 +2051,8 @@ namespace barhelper
                     if (idk.Key == currentDrinkSelected.state)
                         next = true;
                 }
-                if (!founded) currentDrinkSelected.state = "glass";
+                if (!founded)
+                    currentDrinkSelected.state = "glass";
             }
             else
             {
@@ -2164,7 +2103,7 @@ namespace barhelper
                 case "glass":
                     {
                         botletoggle.Content = "Стакан";
-                        drinksSpriteTime.Start();
+                        StartSpriteTimer();
                         arrowRightImageSprite.Opacity = 1;
                         arrowLeftImageSprite.Opacity = 1;
                         if (currentDrinkSelected.sprite == "glass_clear.rsi/")
@@ -2225,18 +2164,12 @@ namespace barhelper
                 fillstring = GetCurrentFillnesString();
                 middleArrowTextSprite.Text = currentfillness.ToString() + "/" + currentDrinkSelected.maxLevels[currentDrinkSelected.state].ToString();
                 if (currentfillness == 0)
-                {
                     drinkFillSprite.Opacity = 0;
-                }
                 else
-                {
                     drinkFillSprite.Source = currentDrinkSelected.GetSprite(fillstring, spritenum);
-                }
             }
             else
-            {
                 AudioManager.PlaySound(errSound);
-            }
         }
         private void ToggleContaier()
         {
@@ -2261,7 +2194,7 @@ namespace barhelper
                 }
             }
         }
-        private void SolutionDone(TextBlock RecipeText, Drink reagentobj, double lastAmount, int recipejuckyou, bool isChild = false)
+        private void SolutionDone(TextBlock RecipeText, Drink reagentobj, double lastAmount, int recipejuckyou)
         {
             var old = RecipeText.Inlines.ToList();
             RecipeText.Inlines.Clear();
@@ -2317,21 +2250,19 @@ namespace barhelper
                 DrawDrink(allDrinks[totalindex]);
             }
             else
-            {
                 AudioManager.PlaySound(errSound);
-            }
         }
-        private void BuildHyperlink(TextBlock RecipeText, Drink drink, double amount, double lastAmount, Drink reagentobj, string text)
+        private void BuildHyperlink(TextBlock RecipeText, Drink drink, double amount, double lastAmount, Drink reagentobj, string text, bool isson = false)
         {
             Run pretext = new("Добавить ");
             Hyperlink hyperlink = new();
             hyperlink.Click += Hyperlink_Click;
             hyperlink.TextDecorations = null;
-            Run run = new(text);
+            Run run = new(text) { Foreground = (Brush)new BrushConverter().ConvertFromString(reagentobj.color)! };
             hyperlink.Inlines.Add(run);
+            Run newline = new("\n");
             var old = RecipeText.Inlines.ToList();
             RecipeText.Inlines.Clear();
-            Run newline = new("\n");
             for (int i = 0; i < old.Count; i++)
             {
                 RecipeText.Inlines.Add(old[i]);
@@ -2351,22 +2282,26 @@ namespace barhelper
                     RecipeText.Inlines.Remove(hyperlink);
                     int index = 0;
                     double coficent = Math.Ceiling(lastAmount / inputinputlol.output);
+                    if (inputinputlol.action == "Shake")
+                    {
+                        RecipeText.Inlines.Remove(RecipeText.Inlines.FirstInline);
+                        RecipeText.Inlines.InsertBefore(RecipeText.Inlines.FirstInline, new Run("Приготавливается в шейкере\n"));
+                    }
                     foreach (var reagent in inputinputlol.input)
                     {
                         if (allIdsDrinks.TryGetValue(reagent.Key, out Drink? reagentobj))
                         {
                             index++;
                             short toadd = (short)Math.Ceiling(coficent * reagent.Value);
-                            reagentobj.hyperlinkson = true;
-                            BuildHyperlink(RecipeText, drink, lastAmount, coficent * reagent.Value, reagentobj, WrapText(GetName(reagentobj) + " (" + toadd.ToString(CultureInfo.InvariantCulture) + ")",26));
+                            BuildHyperlink(RecipeText, drink, lastAmount, coficent * reagent.Value, reagentobj, WrapText(GetName(reagentobj) + " (" + toadd.ToString(CultureInfo.InvariantCulture) + ")\n",26), true);
                         }
                         else
                         {
                             Debug.WriteLine(reagent.Key + " MISSING");
-                            RecipeText.Inlines.Add("ой☺\n");
+                            RecipeText.Inlines.Add("Ой, не нашли " + reagent.Key + "☺\n");
                         }
                     }
-                    SolutionDone(RecipeText, reagentobj, lastAmount, index * 3, true);
+                    SolutionDone(RecipeText, reagentobj, lastAmount, index * 3);
                     AudioManager.PlaySound(yeahSound);
                 }
             };
@@ -2374,27 +2309,116 @@ namespace barhelper
             {
                 AudioManager.PlaySound(hoverSound);
             };
-            History historyobj = new(reagentobj);
+            History historyobj = new(reagentobj)
+            {
+                hyperlinkson = isson,
+                parentHistory = drink,
+                currentAmount = (float)amount,
+                lastAmount = lastAmount
+            };
             hyperlink.Tag = historyobj;
-            historyobj.parentHistory = drink;
-            historyobj.currentAmount = (float)amount;
-            historyobj.lastAmount = lastAmount;
-            run.Foreground = (Brush)new BrushConverter().ConvertFromString(reagentobj.color)!;
+        }
+
+        private void UsedInClick(object sender, RoutedEventArgs e)
+        {
+            AudioManager.PlaySound(clickFilterButtonSound);
+            secondGrid.Children.Clear();
+            filtersection = 4;
+
+
+            System.Windows.Controls.Image arrowHistoryImage = new()
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                VerticalAlignment = VerticalAlignment.Top,
+                Margin = new Thickness(25, 43, 0, 0),
+                Source = arrowhistoryimage,
+                Height = 17
+            };
+            secondGrid.Children.Add(arrowHistoryImage);
+            Button arrowHistory = new()
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                VerticalAlignment = VerticalAlignment.Top,
+                Margin = new Thickness(25,43,0,0),
+                Opacity = 0,
+                Height = 20,
+                Width = 20
+            };
+            arrowHistory.MouseEnter += AnyMouseEnter;
+            arrowHistory.Click += (s,e) => { DrawDrink(currentDrinkSelected); AudioManager.PlaySound(clickSubFilterButtonSound); };
+            secondGrid.Children.Add(arrowHistory);
+            TextBlock usedintext = new()
+            {
+                HorizontalAlignment = HorizontalAlignment.Left,
+                VerticalAlignment = VerticalAlignment.Top,
+                Foreground = Brushes.White,
+                Margin = new Thickness(50, 45, 0, 0),
+                FontFamily = font,
+                FontSize = 26,
+                Text = "Где используется: " + GetName(currentDrinkSelected)
+            };
+            secondGrid.Children.Add(usedintext);
+
+            Grid gridlol = new()
+            {
+                Margin = new Thickness(21, 74, 24, 40)
+            };
+            int columns = (int)Math.Ceiling(currentDrinkSelected.usedin.Count / (double)6);
+            int maxRows = 8;
+            for (int i = 0; i < maxRows; i++)
+            {
+                gridlol.RowDefinitions.Add(new RowDefinition() { MaxHeight = 45 });
+            }
+            int currentColumn = 0;
+            int currentRow = 0;
+            gridlol.ColumnDefinitions.Add(new ColumnDefinition());
+            foreach (Drink drink in currentDrinkSelected.usedin)
+            {
+                Button tmp = new()
+                {
+                    HorizontalAlignment = HorizontalAlignment.Left,
+                    VerticalAlignment = VerticalAlignment.Center,
+                    Foreground = Brushes.Gray,
+                    FontFamily = font,
+                    Style = filterbuttonstyle,
+                    FontSize = 18,
+                    Height = 35,
+                    Content = GetName(drink),
+                    Tag = drink
+                };
+                tmp.MouseEnter += AnyMouseEnter;
+                tmp.MouseLeave += AnyMouseLeave;
+                tmp.Click += (s,e) => {
+                    drinksHistory.Add(new History(currentDrinkSelected) { hyperlinkson = true, currentAmount = 30, lastAmount = amount, parentHistory = currentDrinkSelected });
+                    amount = 30f;
+                    ResetSpriteTimer();
+                    DrawDrink((Drink)((Button)s).Tag);
+                    lockmove = false;
+                    AudioManager.PlaySound(clickSubFilterButtonSound);
+                };
+                Grid.SetRow(tmp, currentRow);
+                Grid.SetColumn(tmp, currentColumn);
+                currentRow++;
+                if (currentRow >= maxRows)
+                {
+                    currentRow = 0;
+                    currentColumn++;
+                    gridlol.ColumnDefinitions.Add(new ColumnDefinition());
+                }
+                gridlol.Children.Add(tmp);
+            }
+            if (currentColumn * maxRows == currentDrinksList.Count && currentRow == 0)
+            {
+                gridlol.ColumnDefinitions.RemoveAt(gridlol.ColumnDefinitions.Count - 1);
+            }
+            secondGrid.Children.Add(gridlol);
         }
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
             AudioManager.PlaySound(clickSubFilterButtonSound);
             History hystoryobj = (History)((Hyperlink)sender).Tag;
             Drink drink = hystoryobj.drink;
-            float tmp = amount;
-            if (drink.hyperlinkson)
-            {
-                drinksHistory.Add(hystoryobj.parentHistory, tmp);
-            }
-            else
-            {
-                drinksHistory.Add(hystoryobj.parentHistory, hystoryobj.currentAmount);
-            }
+            drinksHistory.Add(hystoryobj);
             amount = (float)Math.Ceiling(hystoryobj.lastAmount);
             ResetSpriteTimer();
             DrawDrink(drink);
@@ -2456,12 +2480,8 @@ namespace barhelper
                     DrawDrink(allDrinks[rand.Next(allDrinks.Count)]);
                 }
             }
-            if (filtersection == 1)
-            {
-                if (currentDrinks == "byname" && RussianKeyMapping.Map.TryGetValue(e.Key, out var symbol))
-                    if (bynamedict.ContainsKey(symbol))
-                        DrawSubfiler(symbol);
-            }
+            if (filtersection == 1 && currentDrinks == "byname" && RussianKeyMapping.Map.TryGetValue(e.Key, out var symbol) && bynamedict.ContainsKey(symbol))
+                DrawSubfiler(symbol);
             else if (filtersection == 2 && e.Key == Key.R)
             {
                 AudioManager.PlaySound(clickSubFilterButtonSound);
@@ -2521,6 +2541,18 @@ namespace barhelper
                     {
                         strresult += "\nno recipe";
                     }
+                    if (currentDrinkSelected.usedin.Count > 0)
+                    {
+                        strresult += "\nused in:\n";
+                        foreach (var idk in currentDrinkSelected.usedin)
+                        {
+                            strresult += "  " + idk.id + "\n";
+                        }
+                    }
+                    else
+                    {
+                        strresult += "\nno uses";
+                    }
                     AudioManager.PlaySound("bleep_config.wav");
                     MessageBox.Show(strresult, "data");
                     ;
@@ -2535,8 +2567,10 @@ namespace barhelper
                     ChangeFillnes(-1);
                 else if (e.Key == Key.E)
                     ToggleContaier();
+                else if (e.Key == Key.U && currentDrinkSelected.usedin.Count > 0)
+                    UsedInClick(new(), new());
                 else if (e.Key == Key.Q && drinksHistory.Count > 0)
-                    HistoryClick(new(),new());
+                    HistoryClick(new(), new());
                 else if (currentDrinkSelected.states.Count > 1)
                     if (e.Key == Key.X)
                         if (Keyboard.IsKeyDown(Key.LeftShift))
@@ -2544,6 +2578,12 @@ namespace barhelper
                         else
                             BottleToggle();
             }
+            else if (filtersection == 4)
+                if (e.Key == Key.Q)
+                {
+                    DrawDrink(currentDrinkSelected);
+                    AudioManager.PlaySound(clickSubFilterButtonSound);
+                }
         }
     }
 }
