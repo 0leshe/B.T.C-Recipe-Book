@@ -40,6 +40,7 @@ namespace barhelper
             { Key.P, "З" },
             { Key.Q, "Й" },
             { Key.R, "К" },
+            { Key.Oem3, "Ё" },
             { Key.S, "Ы" },
             { Key.T, "Е" },
             { Key.U, "Г" },

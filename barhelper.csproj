@@ -38,7 +38,7 @@
     <Resource Include="Images\jokerge.png" />
     <Resource Include="Images\spr_textbox_arrow.png" />
     <PackageReference Include="NAudio" Version="2.2.1" />
-    <PackageReference Include="Vintasoft.Barcode.ImageSharp" Version="15.1.4.1" />
+    <PackageReference Include="Vintasoft.Barcode.ImageSharp" Version="15.1.11.1" />
     <Resource Include="Fonts\clacon2.ttf" />
     <Resource Include="Images\recipe_intro.png" />
     <Resource Include="Images\recipe_window.png" />
